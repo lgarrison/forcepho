@@ -10,6 +10,7 @@ def negative_lnlike_multistamp(Theta, scene=None, stamps=None):
 
     lnp = 0.0
     lnp_grad = np.zeros(len(Theta))
+    # TODO: don't initialize workplan everytime
     plans, indices = make_workplans(Theta, scene, stamps)
     for wp, inds in zip(plans, indices):
         lnp_stamp, lnp_stamp_grad = wp.lnlike()

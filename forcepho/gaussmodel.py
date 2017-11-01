@@ -44,6 +44,7 @@ class Star(object):
     radii = np.zeros(0)
 
     # Parameters
+    nshape = 2    # only ra and dec are free for stars
     flux = 0.     # flux
     ra = 0.
     dec = 0.
@@ -106,6 +107,7 @@ class Galaxy(object):
     radii = np.arange(ngauss)
 
     # Parameters
+    nshape = 4    # ra, dec, q, pa [, sersic, rh]
     flux = 0.     # flux
     ra = 0.
     dec = 0.
